@@ -20,6 +20,8 @@ public class SCANSAppNMEA extends NMEAProvider implements LoggerNetworkReceiver 
 	public final String topic = "Logger/GPRMC/#";
 	private LoggerNetworkManager netManager;
 	
+	private long last;
+	
 	public SCANSAppNMEA(NMEAControl nmeaControl) {
 		super(nmeaControl);
 	}
@@ -51,9 +53,19 @@ public class SCANSAppNMEA extends NMEAProvider implements LoggerNetworkReceiver 
 
 	protected void receivedData(LoggerNetworkMessage message) {
 			try {
+				/*
+				 * Android can be a bit weird and if asked to provide updates too often sends a burst of them
+				 * every 10s or so. Ignore updates that are < 800ms from one another. 
+				 */
+				long now = System.currentTimeMillis();
+				if (now - last < 800) {
+					return;
+				}
 				String str = new String(message.getData());
 				StringBuffer sb = new StringBuffer(str);
 				getNMEAProcess().addNewString(sb);
+				System.out.printf("Time since previous loc is %d millis\n", now-last);
+				last = now;
 	//			System.out.println(str);
 			}
 			catch (Exception e) {

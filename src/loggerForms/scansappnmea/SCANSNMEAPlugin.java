@@ -1,4 +1,4 @@
-package loggerForms.snasappnmea;
+package loggerForms.scansappnmea;
 
 import NMEA.NMEAControl;
 import NMEA.NMEAPlugin;

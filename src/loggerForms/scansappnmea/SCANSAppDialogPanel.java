@@ -1,4 +1,4 @@
-package loggerForms.snasappnmea;
+package loggerForms.scansappnmea;
 
 import javax.swing.JComponent;
 import javax.swing.JPanel;

@@ -1,4 +1,4 @@
-package loggerForms.snasappnmea;
+package loggerForms.scansappnmea;
 
 import java.awt.Window;
 
@@ -17,7 +17,7 @@ import loggerForms.network.LoggerNetworkSystem;
  */
 public class SCANSAppNMEA extends NMEAProvider implements LoggerNetworkReceiver {
 
-	public final String topic = "Logger/GPRMC/#";
+	public final String topic = "Logger/NMEA/#";
 	private LoggerNetworkManager netManager;
 	
 	private long last;

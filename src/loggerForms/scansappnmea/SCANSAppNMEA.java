@@ -28,7 +28,7 @@ public class SCANSAppNMEA extends NMEAProvider implements LoggerNetworkReceiver 
 
 	@Override
 	public String getName() {
-		return "SCANS App";
+		return "SCANS App NMEA";
 	}
 
 	@Override

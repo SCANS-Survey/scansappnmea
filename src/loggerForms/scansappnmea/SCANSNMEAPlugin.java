@@ -21,7 +21,7 @@ public class SCANSNMEAPlugin implements NMEAPlugin {
 	@Override
 	public String getHelpSetName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "help/SCANSAppNMEA.hs";
 	}
 
 	@Override

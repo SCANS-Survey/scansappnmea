@@ -64,7 +64,7 @@ public class SCANSAppNMEA extends NMEAProvider implements LoggerNetworkReceiver 
 				String str = new String(message.getData());
 				StringBuffer sb = new StringBuffer(str);
 				getNMEAProcess().addNewString(sb);
-				System.out.printf("Time since previous loc is %d millis\n", now-last);
+//				System.out.printf("Time since previous loc is %d millis\n", now-last);
 				last = now;
 	//			System.out.println(str);
 			}

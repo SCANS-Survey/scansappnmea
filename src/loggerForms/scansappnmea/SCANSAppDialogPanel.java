@@ -15,7 +15,7 @@ public class SCANSAppDialogPanel implements PamDialogPanel {
 	public SCANSAppDialogPanel(SCANSAppNMEA scansAppNMEA) {
 		this.scansAppNMEA = scansAppNMEA;
 		mainPanel = new JPanel();
-		mainPanel.setBorder(new TitledBorder("SCANS App source"));
+//		mainPanel.setBorder(new TitledBorder("SCANS App source"));
 	}
 
 	@Override

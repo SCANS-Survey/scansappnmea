@@ -47,7 +47,7 @@ public class SCANSNMEAPlugin implements NMEAPlugin {
 
 	@Override
 	public String getVersion() {
-		return "0.0";
+		return "1.0";
 	}
 
 	@Override
